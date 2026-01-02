@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect width="180" height="180" fill="#f6f2ea"/>
+  <rect x="12" y="12" width="156" height="156" fill="none" stroke="#14110f" stroke-width="8"/>
+  <text x="90" y="98" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Trebuchet MS, sans-serif" font-size="44" letter-spacing="3" fill="#14110f">P&amp;D</text>
+</svg>
