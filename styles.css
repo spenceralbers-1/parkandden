@@ -203,6 +203,16 @@ video {
   border-bottom: 3px solid var(--line);
 }
 
+.plate.duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.plate.duo a {
+  display: block;
+}
+
 .plate img,
 .plate video {
   width: 100%;
