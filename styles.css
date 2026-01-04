@@ -121,6 +121,19 @@ video {
   border-top: 0;
 }
 
+.hero-copy {
+  margin: 0 0 18px 0;
+  max-width: 720px;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.hero-copy__accent {
+  margin-top: 8px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
 .text-band {
   max-width: 720px;
   margin: 0 0 24px 0;
@@ -339,6 +352,25 @@ video {
 
   .logo__and {
     font-size: 0.7rem;
+  }
+
+  .site-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    padding-bottom: 4px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-nav a {
+    padding-bottom: 3px;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .history-grid {
