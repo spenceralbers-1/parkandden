@@ -18,6 +18,7 @@
     <meta name="twitter:title" content="Park &amp; Den">
     <meta name="twitter:description" content="Park and Den is an earth-sheltered house in Annandale, Minnesota, where structure meets landscape.">
     <meta name="twitter:image" content="https://parkandden.com/assets/img/IMG_5615.JPG">
+    <link rel="preload" as="image" href="assets/img/IMG_2741.JPG" imagesrcset="assets/img/IMG_2741.JPG">
     <title>Park &amp; Den | Earth-Sheltered House</title>
     <link rel="stylesheet" href="styles.css">
     <script src="site.js" defer></script>
@@ -43,8 +44,16 @@
     <main class="site-main">
       <section id="home" class="section section-home">
         <figure class="plate hero">
-          <video autoplay muted playsinline loop poster="assets/img/IMG_2741.JPG">
-            <source src="assets/video/dji_fly_20241009_171114_53_1728513075634_video.MP4" type="video/mp4">
+          <video
+            data-lazy-video
+            autoplay
+            muted
+            playsinline
+            loop
+            preload="none"
+            poster="assets/img/IMG_2741.JPG"
+          >
+            <source data-src="assets/video/dji_fly_20241009_171114_53_1728513075634_video.MP4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </figure>
@@ -103,7 +112,14 @@
           <h3>Structure</h3>
           <figure class="plate">
             <a href="assets/img/IMG_3949%201%20Edited.JPG" target="_blank" rel="noopener">
-              <img src="assets/img/IMG_3949%201%20Edited.JPG" alt="IMG_3949 1 Edited.JPG">
+              <img
+                src="assets/img/IMG_3949%201%20Edited.JPG"
+                alt="IMG_3949 1 Edited.JPG"
+                width="1536"
+                height="2048"
+                loading="lazy"
+                decoding="async"
+              >
             </a>
           </figure>
         </div>
@@ -112,10 +128,24 @@
           <h3>South Wall + Floor Plan</h3>
           <figure class="plate duo">
             <a href="assets/img/South%20Wall.svg" target="_blank" rel="noopener">
-              <img src="assets/img/South%20Wall.svg" alt="South Wall section drawing">
+              <img
+                src="assets/img/South%20Wall.svg"
+                alt="South Wall section drawing"
+                width="630.7"
+                height="683.19"
+                loading="lazy"
+                decoding="async"
+              >
             </a>
             <a href="assets/img/Floor%20Plain.svg" target="_blank" rel="noopener">
-              <img src="assets/img/Floor%20Plain.svg" alt="Floor plan drawing">
+              <img
+                src="assets/img/Floor%20Plain.svg"
+                alt="Floor plan drawing"
+                width="573.98"
+                height="692.9"
+                loading="lazy"
+                decoding="async"
+              >
             </a>
           </figure>
         </div>
@@ -129,32 +159,80 @@
         <div class="gallery-grid">
           <figure class="gallery-item">
             <a href="assets/img/IMG_2371.JPG" target="_blank" rel="noopener">
-              <img src="assets/img/IMG_2371.JPG" alt="IMG_2371.JPG">
+              <img
+                src="assets/img/IMG_2371.JPG"
+                alt="IMG_2371.JPG"
+                width="1536"
+                height="2048"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              >
             </a>
           </figure>
           <figure class="gallery-item">
             <a href="assets/img/IMG_5104.JPG" target="_blank" rel="noopener">
-              <img src="assets/img/IMG_5104.JPG" alt="IMG_5104.JPG">
+              <img
+                src="assets/img/IMG_5104.JPG"
+                alt="IMG_5104.JPG"
+                width="1536"
+                height="2048"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              >
             </a>
           </figure>
           <figure class="gallery-item">
             <a href="assets/img/IMG_3822.JPG" target="_blank" rel="noopener">
-              <img src="assets/img/IMG_3822.JPG" alt="IMG_3822.JPG">
+              <img
+                src="assets/img/IMG_3822.JPG"
+                alt="IMG_3822.JPG"
+                width="1536"
+                height="2048"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              >
             </a>
           </figure>
           <figure class="gallery-item">
             <a href="assets/img/IMG_5615.JPG" target="_blank" rel="noopener">
-              <img src="assets/img/IMG_5615.JPG" alt="IMG_5615.JPG">
+              <img
+                src="assets/img/IMG_5615.JPG"
+                alt="IMG_5615.JPG"
+                width="1536"
+                height="2048"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              >
             </a>
           </figure>
           <figure class="gallery-item">
             <a href="assets/img/IMG_2741.JPG" target="_blank" rel="noopener">
-              <img src="assets/img/IMG_2741.JPG" alt="IMG_2741.JPG">
+              <img
+                src="assets/img/IMG_2741.JPG"
+                alt="IMG_2741.JPG"
+                width="1536"
+                height="2048"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              >
             </a>
           </figure>
           <figure class="gallery-item">
             <a href="assets/img/IMG_3870%202%20Edited.JPG" target="_blank" rel="noopener">
-              <img src="assets/img/IMG_3870%202%20Edited.JPG" alt="IMG_3870 2 Edited.JPG">
+              <img
+                src="assets/img/IMG_3870%202%20Edited.JPG"
+                alt="IMG_3870 2 Edited.JPG"
+                width="1536"
+                height="2048"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              >
             </a>
           </figure>
         </div>

@@ -91,8 +91,10 @@
       figure.className = 'lightbox__item';
 
       const img = document.createElement('img');
-      img.src = item.src;
+      img.dataset.src = item.src;
       img.alt = item.alt || '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
       figure.appendChild(img);
 
       scroller.appendChild(figure);
@@ -103,7 +105,16 @@
     overlay.appendChild(inner);
     document.body.appendChild(overlay);
 
+    const hydrateImages = () => {
+      scroller.querySelectorAll('img[data-src]').forEach((img) => {
+        if (!img.getAttribute('src')) {
+          img.src = img.dataset.src;
+        }
+      });
+    };
+
     const open = (index) => {
+      hydrateImages();
       overlay.hidden = false;
       document.body.classList.add('lightbox-open');
       scroller.scrollTop = 0;
@@ -149,10 +160,53 @@
     });
   };
 
+  const initLazyVideo = () => {
+    const video = document.querySelector('[data-lazy-video]');
+    if (!video) {
+      return;
+    }
+
+    const source = video.querySelector('source[data-src]');
+    const loadVideo = () => {
+      if (!source || video.dataset.loaded === 'true') {
+        return;
+      }
+      const src = source.dataset.src;
+      if (!src) {
+        return;
+      }
+      source.src = src;
+      video.dataset.loaded = 'true';
+      video.load();
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {});
+      }
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              loadVideo();
+              obs.disconnect();
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '120px 0px' },
+      );
+      observer.observe(video);
+    } else {
+      loadVideo();
+    }
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     setActiveNav();
     initPlateClicks();
     initGalleryLightbox();
+    initLazyVideo();
   });
 
   window.addEventListener('hashchange', setActiveNav);
